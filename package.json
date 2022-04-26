@@ -1,0 +1,55 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.0",
+  "description": "express-boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -r esm server.js",
+    "dev": "nodemon -r esm server.js",
+    "babel:clear": "rm -rf ./node_modules/.cache/@babel/register",
+    "test": "npm run babel:clear && NODE_ENV=test USE_DEMO_USER=true mocha --require ./utils/babel-register --timeout 30000 ./src/test/**/*.js --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakibhasancse/express-boilerplate.git"
+  },
+  "author": "SakibHasanCse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sakibhasancse/express-boilerplate/issues"
+  },
+  "homepage": "https://github.com/sakibhasancse/express-boilerplate#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.18.0",
+    "i": "^0.3.7",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.1",
+    "npm": "^8.7.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.7",
+    "@babel/runtime": "^7.17.8",
+    "babel-jest": "^27.5.1",
+    "chai": "^4.3.6",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "jest": "^27.5.1",
+    "mocha": "^9.2.2",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
