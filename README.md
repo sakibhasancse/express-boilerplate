@@ -1,7 +1,7 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Express Boilerplate" />
+<!--   <img src="./.github/app.gif" alt="Express Boilerplate" /> -->
 
-  &#xa0;
+<!--   &#xa0; -->
 
   <!-- <a href="https://expressboilerplate.netlify.app">Demo</a> -->
 </div>
