@@ -1,21 +1,22 @@
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-dotenv.config()
 
 const MONGO_CONFIG = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 };
-const MONGO_URI = process.env.MONGO_DB_URL;
+const MONGO_URI = process.env.MONGO_DB_URL || 'mongodb://localhost:27017/fileStorageApi';
 
-const dbConnection = async (cb, em) => {
+const dbConnection = async () => {
     try{
-        const db = await mongoose.connect(MONGO_URI, MONGO_CONFIG);
+        await mongoose.connect(MONGO_URI, MONGO_CONFIG);
+        const db = mongoose.connection;
+        db.on("error", console.error.bind(console, "connection error: "));
+        db.once("open", function () {
+            console.log(
+                `Db connected, db name: ${db.connections[0].name}`
+            );
+        });
 
-        console.log(
-            `Db connected, db name: ${db.connections[0].name}`
-        );
-        if (cb && em) cb(em);
     }catch (error) {
         console.log(
             `Failed db connection - ${error}`
