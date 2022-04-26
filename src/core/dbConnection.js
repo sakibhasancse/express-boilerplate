@@ -13,7 +13,7 @@ const dbConnection = async () => {
         db.on("error", console.error.bind(console, "connection error: "));
         db.once("open", function () {
             console.log(
-                `Db connected, db name: ${db.connections[0].name}`
+                `Db connected, db name: ${db[0].name}`
             );
         });
 
