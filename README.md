@@ -58,8 +58,9 @@ Describe your project
 
 The following tools were used in this project:
 
-- [Express](https://express.io/)
-- [Node.js](https://nodejs.org/en/)
+- Express
+- Node.js
+- MongoDB
 
 ## :white_check_mark: Requirements ##
 
@@ -82,7 +83,19 @@ $ yarn start
 
 # The server will initialize in the <http://localhost:3000>
 ```
+## :checkered_flag: Project run using docker ##
+```shell
+# copy project intro docker and install dependence
+$ docker build .
 
+# Run the project
+$ docker run image name
+
+# stop the project
+$ docker stop container id
+
+# The server will initialize in the <http://localhost:5000>
+```
 
 Made with :heart: by <a href="https://github.com/SakibHasanCse" target="_blank">Sakib</a>
 
