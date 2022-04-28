@@ -110,8 +110,4 @@ filesRouter
 ```
 
 
-Made with :heart: by <a href="https://github.com/SakibHasanCse" target="_blank">Sakib</a>
-
-&#xa0;
-
 <a href="#top">Back to top</a>
