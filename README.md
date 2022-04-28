@@ -45,14 +45,15 @@
 <br>
 
 ## :dart: About ##
-
-Describe your project
-
+Express boilerplate with mongodb database 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Authentication system using JWT;\
+:heavy_check_mark: Guest user;
+:heavy_check_mark: Database connection;
+:heavy_check_mark: Test case;\
+:heavy_check_mark: Error handling;
+:heavy_check_mark: Easy to use;
 
 ## :rocket: Technologies ##
 
@@ -96,6 +97,18 @@ $ docker stop container id
 
 # The server will initialize in the <http://localhost:5000>
 ```
+
+
+## :checkered_flag: Sample route ##
+```javascript
+const filesRouter = express.Router()
+
+filesRouter
+  .route('/files')
+  .post(isAuth, uploadNewFile)
+  .get(isAuth, getListFiles)
+```
+
 
 Made with :heart: by <a href="https://github.com/SakibHasanCse" target="_blank">Sakib</a>
 
